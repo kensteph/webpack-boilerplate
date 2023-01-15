@@ -7,6 +7,14 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
+  // DEV SERVER
+  devServer: {
+    // This tells webpack-dev-server to serve the files from the dist directory on localhost:8080
+    static: './dist',
+    // If you want to automactically launch the browser
+    open: true,
+    hot: true,
+  },
   // Manage the loaders
   module: {
     rules: [
