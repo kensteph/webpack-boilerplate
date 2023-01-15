@@ -7,6 +7,15 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
+  // Manage the loaders
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   //  Use of the plugins
   plugins: [
     new HtmlWebpackPlugin({
